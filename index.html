@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8"/>
+    <title>冬奥知识科普</title>
+    <style>
+      body {
+        background-image: url("./冰雪.jpg");
+        width:960px;
+        margin-left:auto;
+        margin-right:auto;
+        border-width:15px;
+        border-style:solid;
+        border-color:#E0FFFF;
+        border-radius:5px;
+        padding-left:30px;
+        padding-right:30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="text-align:center;font-size:60px;font-weight:2000;font-family:KaiTi">冬奥知识科普</p>
+    <p style="text-align:center;font-size:35px">距冬奥开始还有</p>
+    <style type="text/css">
+        div{
+            text-align:center;
+            font-size:30px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>JS时间倒计时</title>
+    <script type="text/javascript">
+        var time_now_server,time_now_client,time_end,time_server_client;
+ 
+        time_end=new Date("2022/02/04 00:00:0");//结束的时间
+        time_end=time_end.getTime();//获取的是毫秒
+ 
+        time_now_server=new Date();//开始的时间
+        time_now_server=time_now_server.getTime();
+        setTimeout("show_time()",1000);
+ 
+        function show_time()
+        {
+            var timer = document.getElementById("timer");
+            var hourid = document.getElementById("hour");
+            if(!timer){
+                return ;
+            }
+            timer.innerHTML =time_now_server;
+ 
+            var time_now,time_distance,str_time;
+            var int_day,int_hour,int_minute,int_second;
+            var time_now=new Date();
+            time_now=time_now.getTime();
+            time_distance=time_end-time_now;
+            if(time_distance>0)
+            {
+                int_day=Math.floor(time_distance/86400000)
+                time_distance-=int_day*86400000;
+                int_hour=Math.floor(time_distance/3600000)
+                time_distance-=int_hour*3600000;
+                int_minute=Math.floor(time_distance/60000)
+                time_distance-=int_minute*60000;
+                int_second=Math.floor(time_distance/1000)
+ 
+                if(int_hour < 10)
+                    int_hour="0"+int_hour;
+                if(int_minute<10)
+                    int_minute="0"+int_minute;
+                if(int_second<10)
+                    int_second="0"+int_second;
+                str_time=int_day+":"+int_hour+":"+int_minute+":"+int_second+"";
+                timer.innerHTML=str_time;
+                setTimeout("show_time()",1000);
+            }
+            else
+            {
+                timer.innerHTML =0;
+            }
+        }
+    </script>
+    <div id="timer"></div>
+    <h2 style="text-align:center;font-family:STHeiti">...冬奥基本知识...</h2>
+      <ul style="color:#E0FFFF;font-family:STHeiti;font-size:20px">
+          <li>全称：第24届冬季奥林匹克运动会（The XXIV Olympic Winter Games），即2022年北京冬季奥运会。</li>
+          <li>北京2022年冬奥会计划于2022年2月4日（星期五）开幕，2月20日（星期日）闭幕</li>
+          <li>北京冬季奥运会设7个大项，15个分项，109个小项。</li>
+          <li>北京将主办冰上项目，河北省张家口市将主办雪上项目，北京市延庆区协办雪上项目</li>
+          <li>2021年9月17日，北京冬奥会、冬残奥会主题口号正式对外发布——“一起向未来”！“Together for a Shared Future”</li>
+          <li>申办：2015年7月31日在马来西亚首都吉隆坡举行第128届国际奥委会全体会议上北京以44票获得举办权。</li>
+      </ul>
+    <h2 style="text-align:center;font-family:STHeiti">...冬奥会会徽...</h2>
+    <table>
+    <tr>
+      <td>
+        <p style="color:#E0FFFF;font-family:STHeiti;font-size:20px;">&nbsp;&nbsp;2022北京冬奥会会徽以汉字“冬”为灵感来源，运用中国书法的艺术形态，将厚重的东方文化底蕴与国际化的现代风格融为一体，呈现出新时代的中国新形象、新梦想，传递出新时代中国为办好北京冬奥会，圆冬奥之梦，实现“三亿人参与冰雪运动”目标，圆体育强国之梦，推动世界冰雪运动发展，为国际奥林匹克运动做出新贡献的不懈努力和美好追求。会徽图形上半部分展现滑冰运动员的造型，下半部分表现滑雪运动员的英姿。中间舞动的线条流畅且充满韵律，代表举办地起伏的山峦、赛场、冰雪滑道和节日飘舞的丝带，为会徽增添了节日喜庆的视觉感受，也象征着北京冬奥会将在中国春节期间举行。会徽以蓝色为主色调，寓意梦想与未来，以及冰雪的明亮纯洁。红黄两色源自中国国旗，代表运动的激情、青春与活力。在“BEIJING 2022”字体的形态上汲取了中国书法与剪纸的特点，增强了字体的文化内涵和表现力，也体现了与会徽图形的整体感和统一性。</p>
+      </td>
+      <td>
+        <img src="./冬奥会会徽.jpg">
+      </td>
+    </tr>
+    </table>
+    <h2 style="text-align:center;font-family:STHeiti">...冬奥会吉祥物...</h2>
+    <table>
+    <tr>
+      <td>
+        <p style="color:#E0FFFF;font-family:STHeiti;font-size:20PX">&nbsp;&nbsp;北京冬奥会吉祥物“冰墩墩”以熊猫为原型进行设计创作。将熊猫形象与富有超能量的冰晶外壳相结合，体现了冬季冰雪运动和现代科技特点。头部外壳造型取自冰雪运动头盔，装饰彩色光环，其灵感源自于北京冬奥会的国家速滑馆——“冰丝带”，流动的明亮色彩线条象征着冰雪运动的赛道和5G高科技；左手掌心的心形图案，代表着主办国对全世界朋友的热情欢迎。整体形象酷似航天员，寓意创造非凡、探索未来，体现了追求卓越、引领时代，以及面向未来的无限可能。</p>
+      </td>
+       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>
+      <td>
+        <img src="./冬奥会吉祥物.jpg">
+      </td>
+    </tr>
+    </table>
+    <h2 style="text-align:center;font-family:STHeiti">...冬奥相关视频...</h2>
+      <a href="https://www.bilibili.com/video/BV1WM4y1G7TZ?from=search&seid=9268274708624318225&spm_id_from=333.337.0.0">动漫版冬奥宣传片&nbsp;</a>
+      <a href="https://www.bilibili.com/video/BV13W411M7qM?from=search&seid=9268274708624318225&spm_id_from=333.337.0.0">&nbsp;&nbsp;&nbsp;北京2022冬奥申办宣传片：不虚此行</a>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <h3 style="font-family:STHeiti">参考文献：百度百科</h3>
+    <script>
+    window.alert("欢迎来到我们的冬奥知识科普网站");
+    </script>
+  </body>
+ </html>
